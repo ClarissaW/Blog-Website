@@ -6,9 +6,9 @@ module.exports = {
         }
         next()
     },
-    checkNotLogin:function checkNotLogin (req,res,next){
+    checkNotLogin: function checkNotLogin (req,res,next){
         if (req.session.user) {
-            req.flash('error','Have been signed in')
+            req.flash('error','Have signed in')
             return res.redirect('back')
         }
         next()
